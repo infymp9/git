@@ -1,0 +1,39 @@
+GIT
+mkdir project
+cd project
+git --version
+git config --global user.name "Bugs Bunny"
+git config --global user.email bugs@gmail.com
+git config --global push.default simple
+git config --list
+
+Bare Repo --> Shaing & Storing
+mkdir mainrepo.git
+cd mainrepo.git
+git init --bare
+ll
+
+Non-Bare Repo  --> Shaing, Storing along with Edit & Modify
+touch 1.java
+echo "Line 1" > 1.java
+cat 1.java
+git status
+git add . 
+git status
+git commit -m "perpose of the commit"
+git log
+echo "Line 2" >> 1.java
+echo "Line 1" > 2.java
+git add .
+git commit -m "checkin set of changes"
+git log
+git show d085c941
+
+sub to main (Master to Master)
+git push
+
+cd ../mainrepo.git/
+git log
+
+
+
