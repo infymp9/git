@@ -23,7 +23,7 @@ git status
 git commit -m "perpose of the commit"
 git log
 echo "Line 2" >> 1.java
-echo "Line 1" > 2.java
+
 git add .
 git commit -m "checkin set of changes"
 git log
@@ -34,6 +34,20 @@ git push
 
 cd ../mainrepo.git/
 git log
+
+git clone main to sub2
+git log
+echo "Line 1" > 1.java
+git status
+git add .
+git commit -m "checkin set of changes feom sub 2"
+git push
+
+What and all commit id there in main it will update ur local repo
+git pull
+
+
+
 
 
 
