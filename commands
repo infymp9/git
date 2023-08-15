@@ -46,6 +46,57 @@ git push
 What and all commit id there in main it will update ur local repo
 git pull
 
+Branch parllel development
+git branch
+git branch newrelease
+git branch
+git log
+git checkout newrelease
+git branch 
+git log
+touch 4.java
+git status
+git add.
+git commit -m "4.java adding newrelease"
+ll
+git log
+git checkout master
+git branch
+ll
+git log
+echo "test" > 5.java
+git add .
+git commit -m "adding 5.java from master"
+git log
+git checkout newrelease
+ll
+git log
+git push --> we will get error bcoze newrelease branch in not there in main.git
+git checkout master
+git push   master(workspace)--> master (main.git)
+cd ../main.git
+git log
+cd ../sub01
+ 
+
+
+  
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+ 
+
+
 
 
 
