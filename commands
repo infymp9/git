@@ -77,7 +77,13 @@ git push   master(workspace)--> master (main.git)
 cd ../main.git
 git log
 cd ../sub01
- 
+git checkout master
+git merge newrelease master
+:wq!
+ll
+git log
+git push
+
 
 
   
