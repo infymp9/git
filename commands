@@ -84,6 +84,28 @@ ll
 git log
 git push
 
+merge 
+echo "hi" > file
+git add .
+git commit -m "merge"
+
+git checkout new
+echo "hello" > file
+git add .
+git commit -m "new merge"
+
+git checkout new
+git merge new master
+
+git push -u --all
+
+git clone main.git sub2
+git branch 
+git branch -a
+git checkout new
+git branch 
+
+
 
 
   
