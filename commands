@@ -105,6 +105,59 @@ git branch -a
 git checkout new
 git branch 
 
+cherry-pick ( only particulay commit merge )
+
+git checkout new
+echo "test" > name.html
+git add .
+git commit -m "test cherry-pick"
+git log                          
+git checkout master 
+git cherry-pick commitid 
+
+git log --> latest coomit id to oldest commit id order
+git log -3 --> it will display 3 latest commit id 
+git log -1 --> very latest one
+git log --oneline  --> short form like 7 char commit id and message 
+git log --oneline -3  3 latest commit id short form like 7 char commit id and message
+git log --grep "checkin" --> string or pattren
+git log --grep "checkin" --oneline
+
+
+gitignore
+
+touch 1.class
+touch test.txt
+git status
+echo "1.class" > .gitignore
+ll
+ls -a
+git status
+echo "test.txt" >> .gitignore
+touch 2.class
+touch 3.class
+git status
+cat .gitignore
+echo "*.class" > .gitignore
+cat .gitignore
+echo "*.txt" > .gitignore
+cat .gitignore
+git status
+git add .
+git commit -m "adding gitignore"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
