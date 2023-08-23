@@ -145,6 +145,8 @@ cat .gitignore
 git status
 git add .
 git commit -m "adding gitignore"
+rm *.txt *.class
+
 
 
 
