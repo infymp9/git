@@ -1,0 +1,94 @@
+GIT
+SCM: - It is a process of Tracking & Controlling changes in the software
+Goles of SCM:-  Teamwork ,Defect tracking, Configuration Auditing, Process management.
+Initial Goals: - Operations are Very Speed (Fast), Thousands Parallel Branches (Non-Linear Development), fully Distributed, Able to Handle Large Projects like Linux Efficiently, Light Weight, &Configuration is very simple
+SCM Terminologies:-
+Server/Clients, Repository, Workspace, Branch, check-in/Checkout, Revision, Baseline,
+Version Id/Commit Id
+Centralized Version Control System: - SVN / Sub Version, CVS, Perforce
+Distributed Version Control  System :- Git, Mercurial 
+Git Users Checksums, Commit Id (SHA -1 Hash)
+Commit Id: - Snapshot of the File System (40 Alpha Numeric Characters)
+Local Git Project Has Three Ares: - Working Directory. Staging Area /indexing Area Buffer Area, Git Local repository 
+Staging area: - Taking for snapshot s
+Repository’s:- Bare (Storing & Sharing, it doesn’t contains workspaces
+                 {git init --bare}).
+                 Non-Bare (Create, Edit, Modify, Storing & sharing {git init}).
+
+Commands on Configuration Details
+git -version
+git config --global user.name "Manoj M"
+git config --global user.email "manojeee9@gmail.com"
+git config --global push.default simple
+git config –list
+mkdir centralA.git
+git init –bare
+git clone centralA.git workspace01
+echo “Line 1” > 1.java
+git status……………………………………….(red Means untracked)
+git add .
+git status.…………………………………….(Green)staging area
+git commit –m “first checking”
+git log  (shows latest commit Id to Oldest commit Id)
+(HEAD -> master) Always represents latest commit Id 
+echo “Line 1” >> 1.java
+git show 1856efb (first 7 chars of the commit Id)
+git push (from local repo to central repo)
+git pull (getting new changes from the central repo to current repo)
+git branch       (knowing the list of all branches in current work space)( * indicates current branch)
+git branch newrelease (creating new branch)
+git checkout newrelease  (for switching the branches)
+git merge newrelease  master
+ (For this process we have to present in master branch,    newrelease  source       master Destination  )
+While doing the merge sometimes we get conflict, having same file names with different content in such a case we use vim editor command to delete extra data and save actual data (git conflict comes same file names in diff branches in a same repository or in between the local repo and central repo)
+git push  –u  --all     (creates all local ropos to central repos)
+git branch  –a          (shows all branches present in central repo)
+git cherry-pic k  724bbac3c82d5 (adding single commit id to the master branch)
+git log  -3 (3 indicates  no of commit Ids from the latest)
+git log  - -oneline  (shows o/p in one line)
+git log  - -oneline  -2
+git log  -  - grep  “keyword to search”
+git log  -  - grep  “keyword to search”  - - oneline
+GIT ignore
+Echo “test.txt”  >  .gitignore,  echo  “ *.class” > .gitignore (ignore  .class/.txt  files)
+ git stash
+git stash list
+git  stash  apply  stash@{1}
+git stash clear
+git stash pop
+git reset          (file)
+git reset   - - sort (undo the changes ,     move the head reference)
+git reset   - - mixed  (Default mode,  move the head reference and rollback changes from staging area to working dir) 
+git  reset   - -hard (move the head reference and rollback changes from staging area to working dir and deletes file from workind dir) 
+git revert 2662e21958fa (rollback changes from local repository)
+git checkout  2662e21958 (travers  among  commit id’s)
+git checkout master (comes in  normal position,  head  referes to latest commit id)
+git rm 6.java      (deleted)
+git clean  -n  (dry run)
+git clean  -f    (forcefully)
+git  tag  - a Rel_1.2.1  -m  “releasing 1.2.1”  8hfuftyftfug
+git tag
+git show  Rel_1.2.1
+more than one tag we can attach to particular commit id
+git push  - -tags
+git tag  -d Rel_1.2.1  (deleting tag)
+.git (hidden dir, local repository)
+Vim pre-commit
+GIT HUB is a online storage repository
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
