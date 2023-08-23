@@ -147,6 +147,59 @@ git add .
 git commit -m "adding gitignore"
 rm *.txt *.class
 
+Stashing commit changes
+create stash remove changes from working dir undo the changes
+git status
+echo "Idea 1" > filename1
+echo "Idea 1" > filename2
+git status
+git stash
+git status
+cat filename1
+cat filename2
+cat filename1 filename2
+git stash list
+git stash apply stash@{1}
+git status 
+cat filename1
+cat filename2
+git add .
+git commit -m "applying stash changes"
+git status
+git stash list
+git stash clear 
+git stash list
+
+Reverting changes undo the all changes
+git reser <file> --> revert uncommitted changes
+git reset --soft   --> Move only to HEAD pointer repository
+git reset --mixed --> move HEAD pointer and revert the staging area (default)
+git reset --hard  --> move the HEAD pointer, reset staging area & working tree to the new HEAD all the 3 areas
+git status
+cat filename
+echo "New line" > file name
+git add .
+git status
+git reset --soft
+git status
+git reset --mixed
+cat filename
+git status
+git add .
+git reset --hard
+cat filename
+git status
+
+ 
+
+
+
+
+
+
+
+
+
 
 
 
